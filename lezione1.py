@@ -1,62 +1,62 @@
 
 
-password1 = "1234"
+# password1 = "1234"
 
-password2 = "5678"
-
-
-
-print(password2)
-
-if(password1 == password2):
-    print("Sono uguali")
-else:
-    print("Sono diversi")
-
-#nome = input("Inserisci nome")
-
-#eta = (int(input("Inserisci età")))
-
-#sono un commento
+# password2 = "5678"
 
 
-stringa1 = "Matteo"
-stringa2= "Massimo"
 
-print(stringa1 + " " +  stringa2)
+# print(password2)
+
+# if(password1 == password2):
+#     print("Sono uguali")
+# else:
+#     print("Sono diversi")
+
+# #nome = input("Inserisci nome")
+
+# #eta = (int(input("Inserisci età")))
+
+# #sono un commento
 
 
-lista1 = [1,2,3,4,5]
+# stringa1 = "Matteo"
+# stringa2= "Massimo"
 
-print(lista1)
-
-lista1[3] = 10
-
-print(lista1)
+# print(stringa1 + " " +  stringa2)
 
 
-lista1.append(20)
+# lista1 = [1,2,3,4,5]
 
-lista1.insert(2,40)
-lista1.sort
+# print(lista1)
 
-print(lista1)
+# lista1[3] = 10
+
+# print(lista1)
+
+
+# lista1.append(20)
+
+# lista1.insert(2,40)
+# lista1.sort
+
+# print(lista1)
 
 
 
 #start, stop , step. Da dove iniziamo, dove ci fermiamo, e quanti passi alla volta fare
 
-for i in range(3,12,4):
-    print(i)  
+# for i in range(3,12,4):
+#     print(i)  
     
     
-#Esercizio 1
-numero = int(input("Inserisci un numero: "))
+# #Esercizio 1
+# numero = int(input("Inserisci un numero: "))
 
-if numero % 2 == 0:
-    print("{numero} è pari")
-else:
-    print("{numero} è dispari")
+# if numero % 2 == 0:
+#     print("{numero} è pari")
+# else:
+#     print("{numero} è dispari")
 
 
 
@@ -88,16 +88,16 @@ else:
 #     print(numero ** 2)
 
 
-inp = input("Inserisci numeri separati da spazio: ")  
+# inp = input("Inserisci numeri separati da spazio: ")  
 
-lista1 = []  
+# lista1 = []  
 
-for numero in inp.split():
-    lista1.append(int(numero))  
+# for numero in inp.split():
+#     lista1.append(int(numero))  
 
-for numero in lista1:
-    operazione = numero ** 2
-    print(operazione)
+# for numero in lista1:
+#     operazione = numero ** 2
+#     print(operazione)
 
 
 
@@ -114,8 +114,65 @@ for numero in lista1:
 #         print(cont)
     
     
+
+# lista = [10, 20, 30, 40, 50]
+
+# for i in range(len(lista) - 1, -1, -1):  # Partiamo dall'ultimo elemento e arriviamo al primo
+#     print(lista[i])
     
     
+    
+
+lista = input("Scrivi una lista di numeri separati")
+
+numeri = [int(i) for i in lista.split()]
+
+elemento = numeri[0]
+
+for i in numeri:
+    if i > elemento:
+        elemento = i
+        
+        
+print("il numero massimo è : ", elemento)
+
+contare = 0
+continuareAcontare = True
+while continuareAcontare == True:
+    for i in numeri:
+        contare+=1
+        print(contare)
+        continuareAcontare = False
+
+if(i == 0):
+            print("La lista è vuota")
+else:
+            print("il numero massimo della lista è ", elemento)
+            print("ecco quanti elementi contiene: ", contare)
+            
+        
+    
+        
+        
+
+
+   
+    
+    
+    
+
+
+
+
+
+
+
+
+
+   
+
+
+
     
    
     
