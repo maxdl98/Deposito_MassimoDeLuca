@@ -42,37 +42,72 @@ import random
 
 import random
 
-exit = False  
 
-for i in range(1):
-    user_input = input("Quale numero uscirà? (Scrivi 'esci' per uscire): ")
 
-    if user_input.lower() == "esci":
-        print("Sei uscito dal programma.")
-        exit = True
-        break  
+# def indovinare(numero):
+#    numeroCasuale = random.randint(1, 100)
+#    continuo = False
+#    while True:
+#         if numero == numeroCasuale:
+#             print("Bravo")
+#             break  
 
+#         if 80 <= numero <= 100 and 1 <= numeroCasuale <= 50:
+#             print("Il numero casuale è inferiore a quello che hai scelto: {numeroCasuale}")
+        
+#         if 0 <= numero <= 50 and 51 <= numeroCasuale <= 100:
+#             print(f"Il numero casuale è superiore rispetto a quello che hai scelto: {numeroCasuale}")
+        
+#         risposta = input("Vuoi continuare? scrivi esci ")
+#         if risposta == "esci":
+#             print("Sei uscito dal programma")
+#             break  
+#         else:
+#             numero = int(input("Prova con un altro numero: "))  
+
+
+
+# numeroScelto = int(input("Inserisci numero"))
+# indovinare(numeroScelto)
+
+
+
+
+
+
+# Scrivi un programma che chieda all'utente di inserire due numeri e quindi esegua
+# una serie di operazioni matematiche su di essi (somma, sottrazione, moltiplicazione, divisione) 
+# e visualizzi il risultato. Ogni volta che l'utente inserisce un'operazione,
+# il programma deve mostrare il risultato dell'operazione corrispondente.
+# Inoltre, dopo ogni calcolo, il programma deve chiedere all'utente
+# se vuole continuare a fare altre operazioni con i numeri, oppure uscire dal programma.
+
+
+def operazione(numero1, numero2):
+    
+    chiedere = input("Quale operazione vuoi effettuare? +? -? /? *? ")
+    
+    if(chiedere == "+"):
+        return numero1 + numero2
+    
+    if(chiedere == "-"):
+        return numero1 - numero2
+    
+    if(chiedere == "*"):
+        return numero1 * numero2
+    
     try:
-        input_number = int(user_input)  
-    except ValueError:
-        print("Per favore, inserisci un numero valido o 'esci' per uscire.")
-        continue  
+            return numero1 / numero2
+    except Exception:
+            print(" non puoi dividere per 0")
+            return None
+        
 
-    numero = random.randint(1, 100)
+        
+        
 
-    if input_number == numero:
-        print("Hai indovinato il numero!")
-    elif numero >= 70 and numero <= 100 and input_number >= 70:
-        print("Il numero era {numero}. ci sei andato vicino")
-    else:
-        print("Il numero era {numero}. Non hai indovinato.")
+print(operazione(5,5))
 
-    risposta = input("Vuoi continuare? (Scrivi 'esci' per uscire): ").lower()
-
-    if risposta == "esci":
-        print("Sei uscito dal programma.")
-        exit = True
-        break  # Esce dal ciclo
 
     
   
